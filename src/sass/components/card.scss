@@ -1,0 +1,21 @@
+.food-card {
+    border: black;
+    background: white;
+    color: gray;
+    width: 70%;
+    border-radius: 0 1.5rem;
+    padding: 0 0 1.5rem 0;
+    margin: .5rem;
+    h2 {
+        position: absolute;
+        color: white;
+    }
+    h3 {
+        text-align: right;
+    }
+    img {
+        height: 37rem;
+        width: 100%;
+        border-radius: 0 1.5rem;
+    }
+}
