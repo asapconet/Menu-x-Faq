@@ -13,3 +13,11 @@
 
 @import "pages/home";
 
+* {
+    // font-family: Roboto;
+}
+
+.app-body {
+    padding: 3.5rem 10% 0 10%;
+    background-color: gray;
+}
