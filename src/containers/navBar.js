@@ -19,7 +19,7 @@ export const Navigator = ({data}) => {
                 )
               })} */}
             </li>
-            <li>123</li>
+            <li>cart</li>
             <li>FAQs</li>
           </ul>
         </div>
