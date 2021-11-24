@@ -12,10 +12,6 @@ const MainApp = () => {
       <Navigator/>
         <div className='app-body'>
           <Menu/>
-          <h1>Lets get to work</h1>
-          <h2>Are we ready for this</h2>
-          <h3>for the very last time come on</h3>
-          <Buttons1 >this-standings</Buttons1>
         </div>
       </>
     );

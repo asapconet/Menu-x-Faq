@@ -1,14 +1,20 @@
 import React from "react";
-import '../sass/components/_button.scss'
+import "../sass/components/_button.scss";
 
-const Button1 = ({ children, onclick, }) => {
+const Button1 = ({ children, onclick }) => {
   return (
-    <button
-    
-     className='primary-btn ' onclick={onclick}>
+    <button className="primary-btn " onclick={onclick}>
       {children}
     </button>
   );
 };
 
 export default Button1;
+
+export const Button2 = ({children, onClick}) => {
+    return (
+    <button className="secondary-btn" onclick={onclick}>
+      {children}
+    </button>
+  );
+}
