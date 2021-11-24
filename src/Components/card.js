@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import Button1 from "./button";
 import menu from "../data/api";
 
 export const Card = () => {
-  const [data, setData] = useState(menu);
 
   return (
     <div>
-      {data.map((e) => {
+      {menu.map((e) => {
         const { id, title, price, img, desc } = e;
         return (
           <div className="flex sm:flex-col " key={id}>
