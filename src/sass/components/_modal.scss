@@ -1,0 +1,15 @@
+main {
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    background: white;
+}
+.container {
+    width: 30rem;
+    background-color: black;
+    form {
+        color: blanchedalmond;
+        display: grid;
+        text-align: left;
+    }
+}

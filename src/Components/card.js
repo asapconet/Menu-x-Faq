@@ -4,6 +4,8 @@ import menu from "../data/api";
 
 export const Card = () => {
 
+
+
   return (
     <div>
       {menu.map((e) => {
@@ -17,7 +19,7 @@ export const Card = () => {
                 <h3 className="">${price}</h3>
 
                 <div className='m-2'>
-                  <Button1>opt1</Button1>
+                  <Button1 >opt1</Button1>
                   <Button1>optn2</Button1>
                   <Button1>optn3</Button1>
                 </div>
