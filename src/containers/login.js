@@ -18,10 +18,9 @@ import Modal from "../Components/modal";
         closeModal={handleModal}
       >
         <form>
-          <label>
-            name
-            <Input type="text" /> 
-          </label>
+          <Input 
+          type='text'
+          />
         </form>
       </Modal>
     </>

@@ -42,9 +42,9 @@ export default function ModalTwo({
                       as="h3"
                       className="text-3xl font-bold leading-6 capitalize mb-5 text-gray-700 flex justify-between"
                     >
-                      <span>{title}</span>
+                      <span className="bg">{title}</span>
                       <span
-                        className="cursor-pointer font-bold"
+                        className="cursor-pointer font-bold "
                         onClick={closeModal}
                       >
                         {" "}

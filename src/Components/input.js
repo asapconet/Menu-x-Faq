@@ -1,7 +1,6 @@
 import React from "react";
-// import "../App.css";
 
-export default function Input({
+const Input = ({
   title,
   label,
   placeholder,
@@ -9,7 +8,7 @@ export default function Input({
   required,
   disabled = false,
   type,
-}) {
+}) => {
   return (
     <div className="mb-6">
       <label
@@ -24,8 +23,10 @@ export default function Input({
         type={type}
         placeholder={placeholder}
         disabled={disabled}
-        {...register(title, { required })}
+        // {...register(title, { required })}
       />
     </div>
   );
-}
+};
+
+export default Input;
