@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.4.1",
+    "@craco/craco": "^6.4.2",
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
     "@headlessui/react": "^1.4.2",
@@ -15,7 +15,9 @@
     "node-sass": "4.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
     "react-icon": "^1.0.0",
+    "react-icons": "^4.3.1",
     "react-router-dom": "^6.0.2",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.3",
