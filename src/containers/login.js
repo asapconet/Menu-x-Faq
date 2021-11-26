@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Input from "../Components/input";
 import Modal from "../Components/modal";
 
  const Login = () => {
@@ -16,7 +17,12 @@ import Modal from "../Components/modal";
         open={modalOpen}
         closeModal={handleModal}
       >
-        <>athis took long</>
+        <form>
+          <label>
+            name
+            <Input type="text" /> 
+          </label>
+        </form>
       </Modal>
     </>
   );

@@ -1,20 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Button1, { Button2 } from "../Components/button";
 // import menu from "../data/api";
+import Input from "../Components/input";
+import Modal from "../Components/modal";
 import "../sass/pages/navBar.scss";
 import { FaAngrycreative, FaCartArrowDown } from "react-icons/fa";
 
 
-export const Navigator = ({ data, setModalOpen }) => {
+export const Navigator = () => {
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setModalOpen(true);
-    return console.log("yes i heard the press");
+  const handleModal = () => {
+    return setModalOpen(false);
   };
-
   return (
     <>
+      <Modal
+        title="something"
+        description="this is it"
+        open={modalOpen}
+        closeModal={handleModal}
+      >
+        <form>
+          <label>
+            name
+            {/* <Input type="text" /> */}
+          </label>
+        </form>
+      </Modal>
       <div className="nav-body">
         <div className="nav-container">
           <FaAngrycreative className="text-6xl text-white" />
@@ -30,14 +43,14 @@ export const Navigator = ({ data, setModalOpen }) => {
                 )
               })} */}
               </li>
-              <li>
-                <FaCartArrowDown className='text-2xl'/>
-              </li>
               <li>FAQs</li>
+              <li>
+                <FaCartArrowDown className="text-2xl" />
+              </li>
             </ul>
           </div>
           <div>
-            <Button1 onClick={handleSubmit}>sign in ...</Button1>
+            <Button1 onClick={() => setModalOpen(true)}>sign in ...</Button1>
             <Button2>sign up...</Button2>
           </div>
         </div>
