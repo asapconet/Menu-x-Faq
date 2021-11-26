@@ -1,11 +1,9 @@
 import React from "react";
 import Button1 from "./button";
 import menu from "../data/api";
+import { FaUser, FaThumbsUp, FaPlus, FaHeart } from "react-icons/fa";
 
 export const Card = () => {
-
-
-
   return (
     <div>
       {menu.map((e) => {
@@ -15,13 +13,22 @@ export const Card = () => {
             <div className="food-card sm:w-40">
               <h2>{title}</h2>
               <img src={img} alt={title} />
-              <div className="p-1">
+              <div className="flex justify-between p-4 pb-0 ">
                 <h3 className="">${price}</h3>
 
-                <div className='m-2'>
-                  <Button1 >opt1</Button1>
-                  <Button1>optn2</Button1>
-                  <Button1>optn3</Button1>
+                <div className="m-2">
+                  <Button1>
+                    <FaHeart/>
+                  </Button1>
+                  <Button1>
+                    <FaThumbsUp/>
+                  </Button1>
+                  <Button1>
+                    <FaPlus/>
+                  </Button1>
+                </div>
+                <div className='text-sm font-bold'>
+                  <FaUser className='text-2xl'/>
                 </div>
               </div>
             </div>

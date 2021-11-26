@@ -2,7 +2,7 @@ import React from "react";
 import Button1, { Button2 } from "../Components/button";
 // import menu from "../data/api";
 import "../sass/pages/navBar.scss";
-import { FaAngrycreative } from "react-icons/fa";
+import { FaAngrycreative, FaCartArrowDown } from "react-icons/fa";
 
 
 export const Navigator = ({ data, setModalOpen }) => {
@@ -30,7 +30,9 @@ export const Navigator = ({ data, setModalOpen }) => {
                 )
               })} */}
               </li>
-              <li>cart</li>
+              <li>
+                <FaCartArrowDown className='text-2xl'/>
+              </li>
               <li>FAQs</li>
             </ul>
           </div>
