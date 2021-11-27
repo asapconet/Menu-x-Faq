@@ -8,10 +8,10 @@ import { FaAngrycreative, FaCartArrowDown, FaUserTie} from "react-icons/fa";
 
 
 export const Navigator = () => {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
 
     const handleModal = () => {
-      return setModalOpen(true);
+      return setModalOpen(false);
     };
 
 
