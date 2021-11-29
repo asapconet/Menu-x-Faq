@@ -18,25 +18,42 @@ export const Card = () => {
 
                 <div className="m-2">
                   <Button1>
-                    <FaHeart/>
+                    <FaHeart />
                   </Button1>
                   <Button1>
-                    <FaThumbsUp/>
+                    <FaThumbsUp />
                   </Button1>
                   <Button1>
-                    <FaPlus/>
+                    <FaPlus />
                   </Button1>
                 </div>
-                <div className='text-sm font-bold'>
-                  <FaUser className='text-2xl'/>
+                <div className="text-sm font-bold">
+                  <FaUser className="text-2xl" />
                 </div>
               </div>
             </div>
-            <div class="flex flex-col text-justify w-80 p-2 m-2 rounded-tl-none rounded-bl-2xl rounded-tr-2xl bg-white">
+            <div class="flex flex-col text-justify w-80 p-2 my-2 rounded-tl-none rounded-bl-2xl rounded-tr-2xl bg-white">
               <h4 className="p-1 text-3xl font-bold capitalize text-center">
                 receipe
               </h4>
-              <p>{desc}</p>
+              <p className="text-right text-medium m-0 ">{desc}</p>
+
+              <div className="mt-5 text-gray-500 ">
+                <h5>comments</h5>
+                <div className="border text-sm ">
+                  <span>
+                    Jon:{" "}
+                    <p>
+                      I tried this, reciepe and my mom loved it <br /> it was
+                      delicious and I would buy and try some more
+                    </p>
+                  </span>
+                  <span>
+                    Maang:
+                    <p>This is delicious, nice job</p>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         );

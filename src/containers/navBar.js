@@ -69,7 +69,7 @@ export const Navigator = () => {
           </div>
           <div>
             <Button1 onClick={() => setModalOpen(true)}>sign in ...</Button1>
-            <Button2>sign up...</Button2>
+            <Button2 onClick='./login'>sign up...</Button2>
           </div>
         </div>
       </div>
