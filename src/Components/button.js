@@ -11,10 +11,10 @@ const Button1 = ({ children, onClick }) => {
 
 export default Button1;
 
-export const Button2 = ({children, onClick}) => {
-    return (
+export const Button2 = ({ children, onClick, className }) => {
+  return (
     <button className="secondary-btn" onClick={onClick}>
       {children}
     </button>
   );
-}
+};

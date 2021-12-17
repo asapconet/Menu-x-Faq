@@ -42,7 +42,7 @@ export default function ModalTwo({
                       as="h3"
                       className="text-3xl font-bold leading-6 capitalize mb-5 text-gray-700 flex justify-between"
                     >
-                      <span className="bg">{title}</span>
+                      <span>{title}</span>
                       <span
                         className="cursor-pointer font-bold "
                         onClick={closeModal}
@@ -52,7 +52,7 @@ export default function ModalTwo({
                       </span>
                     </Dialog.Title>
                     <div className="mt-2">
-                      <p className="text-sm mb-5 text-gray-600">
+                      <p className="text-base mb-5 font-medium text-gray-600">
                         {description}
                       </p>
                     </div>
@@ -77,7 +77,9 @@ export default function ModalTwo({
                     </span>
                   </Dialog.Title>
                   <div className="mt-2">
-                    <p className="text-sm mb-5 text-gray-600">{description}</p>
+                    <p className="text-base mb-5 text-md font-medium text-gray-600">
+                      {description}
+                    </p>
                   </div>
                   <div className="text-sm">{children}</div>
                 </div>

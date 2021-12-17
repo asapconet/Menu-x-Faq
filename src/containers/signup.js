@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import Input from "../Components/input";
 import Modal from "../Components/modal";
 import { Button2 } from "../Components/button";
-import { FaAngleDoubleRight, FaUserTie } from "react-icons/fa";
+import {
+  FaAngleDoubleRight,
+  FaGithub,
+  FaGoogle,
+  FaInstagram,
+  FaUserTie,
+} from "react-icons/fa";
 
-const Login = () => {
+const Signup = () => {
   const [modalOpen, setModalOpen] = useState(true);
 
   const handleSubmit = () => {
@@ -12,47 +18,48 @@ const Login = () => {
   };
 
   const handleModal = () => {
-    return setModalOpen(false);
+    setModalOpen(false);
+    window.location.href='/'
   };
-
   return (
-    <>
+    <div>
       <Modal
         title={<FaUserTie />}
         description="Ensure you enter correct credentials"
         open={modalOpen}
         closeModal={handleModal}
       >
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="font-bold">
           <label>
-            Username or Email
-            <Input
-              id="name"
-              type="text"
-              placeholder="@jonson or a@icloud.com"
-            />
+            Full Name
+            <Input id="name" type="text" placeholder="Asap Conet" />
+          </label>
+          <label>
+            Email
+            <Input id="email" type="email" placeholder="asap@icloud.com" />
           </label>
           <label>
             Password
             <Input id="psw" type="password" placeholder="jwe@123\/" />
           </label>
           <div className="flex justify-center text-center my-6">
-            <Button2>
-              Login <FaAngleDoubleRight />
+            <Button2 type="submit">
+              Signup <FaAngleDoubleRight />
             </Button2>
           </div>
           <div className="flex justify-between">
-            <span>
-              <a href="a.com">forgot password?</a>
+            <span className="flex gap-x-2">
+              <FaGoogle />
+              <FaInstagram />
+              <FaGithub />
             </span>
-            <span>
-              <a href="/signup">new here? signup</a>
+            <span className="font-medium">
+              <a href="/login">have an account? login</a>
             </span>
           </div>
         </form>
-      </Modal>{" "}
-    </>
+      </Modal>
+    </div>
   );
 };
-
-export default Login;
+export default Signup;

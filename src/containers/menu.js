@@ -8,6 +8,7 @@ export const Menu = () => {
         <div>
             <Modal/>
             <Card/>
+            
         </div>
     )
 }
