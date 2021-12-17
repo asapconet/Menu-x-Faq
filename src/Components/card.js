@@ -28,13 +28,15 @@ export const Card = () => {
               <div className="flex justify-between p-4 pb-0 ">
                 <h3 className="">${price}</h3>
 
-                <div className="m-2">
+                <div className="m-2 px-3">
                   <Button1>
                     <FaHeart />
                   </Button1>
-                  <Button1>
-                    <FaThumbsUp />
-                  </Button1>
+                  <span className="px-2">
+                    <Button1>
+                      <FaThumbsUp />
+                    </Button1>
+                  </span>
                   <Button1>
                     <FaPlus />
                   </Button1>

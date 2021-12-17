@@ -18,3 +18,9 @@
   padding: 3.5rem 10% 0 10%;
   background: rgb(236, 193, 236);
 }
+
+@media screen and (max-width: 660px) {
+  .app-body {
+    padding: 3.5rem 3% 2% .1%;
+  }
+}

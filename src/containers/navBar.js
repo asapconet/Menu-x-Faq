@@ -4,14 +4,12 @@ import "../sass/pages/navBar.scss";
 import { FaAngrycreative, FaCartArrowDown } from "react-icons/fa";
 
 export const Navigator = () => {
-
-
   return (
     <>
       <div className="nav-body">
         <div className="nav-container flex ">
-          <FaAngrycreative className="text-6xl text-white" />
-          <div>
+          <FaAngrycreative className="logo-lg text-6xl text-white" />
+          <div className="options-lg">
             <ul>
               <ul>
                 <li className="hover:bg-white rounded-t-lg">
@@ -35,7 +33,7 @@ export const Navigator = () => {
               </ul>
             </ul>
           </div>
-          <div className="flex">
+          <div className=" buttons-lg flex">
             <Button1>
               <a href="/login">sign in ...</a>
             </Button1>
@@ -44,6 +42,9 @@ export const Navigator = () => {
               <a href="/signup">sign up...</a>
             </Button2>
           </div>
+        </div>
+        <div className="nav-sm nav-lg">
+          <FaAngrycreative className="text-6xl text-white" />
         </div>
       </div>
     </>
