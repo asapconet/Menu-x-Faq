@@ -1,9 +1,9 @@
 import React from "react";
 import "../sass/components/_button.scss";
 
-const Button1 = ({ children, onClick }) => {
+const Button1 = ({ children, onClick, className }) => {
   return (
-    <button className="primary-btn " onClick={onClick}>
+    <button className={"primary-btn" + className} onClick={onClick}>
       {children}
     </button>
   );

@@ -2,12 +2,14 @@ import React from "react";
 import Button1, { Button2 } from "../Components/button";
 import "../sass/pages/navBar.scss";
 import { FaAngrycreative, FaCartArrowDown } from "react-icons/fa";
+import Logo from '../images/Logo.png'
 
 export const Navigator = () => {
   return (
     <>
       <div className="nav-body">
         <div className="nav-container flex ">
+          <img src={Logo} alt="logo" className="logo-lg hidden"/>
           <FaAngrycreative className="logo-lg text-6xl text-white" />
           <div className="options-lg">
             <ul>

@@ -19,26 +19,29 @@ export const Card = () => {
   return (
     <div>
       {menu.map((e) => {
-        const { id, title, price, img, desc } = e;
+        const { id, title, price, img, desc, location } = e;
         return (
           <div className="card-container flex" key={id}>
             <div className="food-card sm:w-40">
               <h2>{title}</h2>
               <img src={img} alt={title} />
               <div className="flex justify-between p-4 pb-0 ">
-                <h3 className="">${price}</h3>
+                <h3 className="text-green-500">${price}</h3>
 
-                <div className="m-2 px-3">
+                <div className=" flex items-center m-2 px-3">
                   <Button1>
-                    <FaHeart />
+                    <FaHeart className="text-red-600" />
+                    <span className="text-xs">10</span>
                   </Button1>
-                  <span className="px-2">
+                  <span className="px-5">
                     <Button1>
                       <FaThumbsUp />
+                      <span className="text-xs">12</span>
                     </Button1>
                   </span>
                   <Button1>
                     <FaPlus />
+                    <span className="text-transparent">0</span>
                   </Button1>
                 </div>
                 <div className="text-sm font-bold">
@@ -48,6 +51,7 @@ export const Card = () => {
               <span className="text-xs font-bold text-gray-400 float-right">
                 {postDate.day + "/" + postDate.month + "/" + postDate.year}
               </span>
+              <span className="mx-2 font-bold">{location}</span>
               <div className="receipe-container-lg">
                 <h4 className="pt-2 px-1 text-2xl font-bold capitalize">
                   receipe
