@@ -2,14 +2,25 @@ import React from "react";
 import Button1, { Button2 } from "../Components/button";
 import "../sass/pages/navBar.scss";
 import { FaAngrycreative, FaCartArrowDown } from "react-icons/fa";
-import Logo from '../images/Logo.png'
+import Logo from "../images/Logo.png";
+
+import {useDispatch} from 'react-redux'
+import { HomeActions } from "../Context/home-slice";
 
 export const Navigator = () => {
+
+const dispatch = useDispatch()
+
+const toggleCartHandler = () => {
+dispatch(HomeActions.toggle())
+console.log('clicked')
+}
+ 
   return (
     <>
       <div className="nav-body">
         <div className="nav-container flex ">
-          <img src={Logo} alt="logo" className="logo-lg hidden"/>
+          <img src={Logo} alt="logo" className="logo-lg hidden" />
           <FaAngrycreative className="logo-lg text-6xl text-white" />
           <div className="options-lg">
             <ul>
@@ -30,7 +41,9 @@ export const Navigator = () => {
               </ul>
               <ul>
                 <li>
-                  <FaCartArrowDown className="text-2xl" />
+                  <button onClick={toggleCartHandler}>
+                    <FaCartArrowDown className="text-2xl" />
+                  </button>
                 </li>
               </ul>
             </ul>

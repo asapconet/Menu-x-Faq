@@ -1,14 +1,20 @@
-import Modal from '../Components/modal'
-import React from 'react'
-import { Card } from '../Components/card'
-import '../sass/components/card.scss'
+import React from "react";
+import { useSelector } from "react-redux";
+import Modal from "../Components/modal";
+import { Card } from "../Components/card";
+import "../sass/components/card.scss";
+import Cart from "../Components/cart";
 
 export const Menu = () => {
-    return (
-        <div>
-            <Modal/>
-            <Card/>
-            
-        </div>
-    )
-}
+
+  const showCart = useSelector((state) => state.home.isCartVisible);
+
+
+  return (
+    <div>
+      <Modal />
+      {showCart && <Cart />}
+      <Card />
+    </div>
+  );
+};

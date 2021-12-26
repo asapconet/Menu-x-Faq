@@ -6,7 +6,7 @@ import { Menu } from "../src/containers/menu";
 import Login from '../src/containers/login'
 import Signup from './containers/signup';
 import Footer from './containers/footer';
-import Cart from './Components/cart';
+// import Cart from './Components/cart';
 
 
 const MainApp = () => {
@@ -22,7 +22,7 @@ const MainApp = () => {
          <Routes>
            <Route exact path='/login' element={<Login/>}/>
            <Route exact path='/signup' element={<Signup/>}/>
-           <Route exact path='/cart' element={<Cart/>} />
+           {/* <Route exact path='/cart' element={<Cart/>}/> */}
          </Routes>
         </Router>
       </>
