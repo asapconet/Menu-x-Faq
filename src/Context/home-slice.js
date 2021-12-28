@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const homeSlice = createSlice({
   name: "home",
-  initialState: { isCartVisible: true },
+  initialState: { isCartVisible: false },
   reducers: {
     toggle(state) {
       state.isCartVisible = !state.isCartVisible;

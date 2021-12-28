@@ -9,6 +9,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 12.4% 0 10.4%;
+    .logo-sm {
+      display: none;
+    }
     ul {
       display: flex;
       li {
@@ -30,6 +33,7 @@
   .logo-lg {
     display: none;
   }
+  
   .nav-sm {
     display: flex;
     justify-content: center;

@@ -1,16 +1,33 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { CartActions} from "../Context/cart-slice";
 import Button1 from "./button";
 import menu from "../data/api";
 import { FaUser, FaThumbsUp, FaPlus, FaHeart } from "react-icons/fa";
 
-export const Card = () => {
+export const Card = (props) => {
+  const dispatch = useDispatch();
+
+  const { id, title, price, img, location, desc, category } = props;
+  const addToCartHandler = () => {
+    dispatch(CartActions.addItemToCart({
+      id,
+      title,
+      img,
+      price,
+      location,
+      desc, 
+      category
+    }));
+    console.log('item added')
+  };
+
   const postTiming = () => {
     let hour = new Date().getHours().toString();
     let min = new Date().getMinutes().toString();
     let time = hour + ":" + min + "";
     return time;
   };
-
   const postDate = {
     day: new Date().getDay(),
     month: new Date().getMonth(),
@@ -39,7 +56,7 @@ export const Card = () => {
                       <span className="text-xs">12</span>
                     </Button1>
                   </span>
-                  <Button1>
+                  <Button1 onClick={addToCartHandler}>
                     <FaPlus />
                     <span className="text-transparent">0</span>
                   </Button1>
