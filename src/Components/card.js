@@ -8,27 +8,25 @@ import { FaUser, FaThumbsUp, FaPlus, FaHeart } from "react-icons/fa";
 export const Card = (props) => {
   const dispatch = useDispatch();
 
-  const { id, title, price, img, location, desc, category } = props;
+  const { id, title, price, img } = props;
+
   const addToCartHandler = () => {
     dispatch(CartActions.addItemToCart({
       id,
       title,
-      img,
       price,
-      location,
-      desc, 
-      category
+      img,
     }));
-    console.log('item added')
+    console.log(price)
   };
 
-  const postTiming = () => {
-    let hour = new Date().getHours().toString();
-    let min = new Date().getMinutes().toString();
+  let postTiming = () => {
+    let hour = new Date().getHours().toFixed();
+    let min = new Date().getMinutes().toFixed();
     let time = hour + ":" + min + "";
     return time;
   };
-  const postDate = {
+  let postDate = {
     day: new Date().getDay(),
     month: new Date().getMonth(),
     year: new Date().getFullYear(),
