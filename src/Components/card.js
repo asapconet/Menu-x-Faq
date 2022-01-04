@@ -1,23 +1,34 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { CartActions} from "../Context/cart-slice";
+import { useDispatch, useSelector } from "react-redux";
+import { CartActions } from "../Context/cart-slice";
 import Button1 from "./button";
 import menu from "../data/api";
 import { FaUser, FaThumbsUp, FaPlus, FaHeart } from "react-icons/fa";
+import { likeAction } from "../Context/like-slice";
 
 export const Card = (props) => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
+  const like = useSelector(state => state.like.liked)
+
+  const likeHandler = () => {
+    dispatch(likeAction.liked())
+    console.log('liked')
+    console.log(like)
+  };
+  // const dispatch = useDispatch();
 
   const { id, title, price, img } = props;
 
   const addToCartHandler = () => {
-    dispatch(CartActions.addItemToCart({
-      id,
-      title,
-      price,
-      img,
-    }));
-    console.log(price)
+    dispatch(
+      CartActions.addItemToCart({
+        id,
+        title,
+        price,
+        img,
+      })
+    );
+    console.log(price);
   };
 
   let postTiming = () => {
@@ -49,8 +60,8 @@ export const Card = (props) => {
                     <span className="text-xs">10</span>
                   </Button1>
                   <span className="px-5">
-                    <Button1>
-                      <FaThumbsUp />
+                    <Button1 onClick={likeHandler}>
+                     { <FaThumbsUp />}
                       <span className="text-xs">12</span>
                     </Button1>
                   </span>
