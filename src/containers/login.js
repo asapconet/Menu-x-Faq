@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Input from "../Components/input";
 import Modal from "../Components/modal";
 import { Button2 } from "../Components/button";
+import { Link } from "react-router-dom";
 import { FaAngleDoubleRight, FaUserTie } from "react-icons/fa";
 
 const Login = () => {
@@ -12,7 +13,8 @@ const Login = () => {
   };
 
   const handleModal = () => {
-    return setModalOpen(false);
+    setModalOpen(false);
+    window.location.href = "/";
   };
 
   return (
@@ -37,9 +39,11 @@ const Login = () => {
             <Input id="psw" type="password" placeholder="jwe@123\/" />
           </label>
           <div className="flex justify-center text-center my-6">
-            <Button2>
-              Login <FaAngleDoubleRight />
-            </Button2>
+            <Link to="/menu">
+              <Button2>
+                Login <FaAngleDoubleRight />
+              </Button2>
+            </Link>
           </div>
           <div className="flex justify-between">
             <span>

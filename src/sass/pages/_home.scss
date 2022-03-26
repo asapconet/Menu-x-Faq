@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inspiration&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hurricane&family=Inspiration&display=swap");
+
+body {
+  background-image: url(../../images/11062b_16498040e0d148beaa0ce957046216ab_mv2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.onboarding {
+  // padding: 20.85rem;
+  //   height: 51.7rem;
+  //   width: 100%;
+  .main-contents {
+    font-family: "Hurricane", cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14rem;
+    h1 {
+      font-family: "Inspiration", cursive;
+      font-size: 5rem;
+      padding-top: -3rem;
+    }
+    h2 {
+      text-transform: uppercase;
+      font-weight: 200;
+    }
+  }
+}

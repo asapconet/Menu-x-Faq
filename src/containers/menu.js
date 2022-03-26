@@ -6,12 +6,10 @@ import "../sass/components/card.scss";
 import Cart from "../Components/cart";
 
 export const Menu = () => {
-
   const showCart = useSelector((state) => state.home.isCartVisible);
 
-
   return (
-    <div>
+    <div className="app-body">
       <Modal />
       {showCart && <Cart />}
       <Card />

@@ -9,6 +9,7 @@ import {
   FaInstagram,
   FaUserTie,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   const [modalOpen, setModalOpen] = useState(true);
@@ -19,7 +20,7 @@ const Signup = () => {
 
   const handleModal = () => {
     setModalOpen(false);
-    window.location.href='/'
+    window.location.href = "/";
   };
   return (
     <div>
@@ -43,9 +44,11 @@ const Signup = () => {
             <Input id="psw" type="password" placeholder="jwe@123\/" />
           </label>
           <div className="flex justify-center text-center my-6">
-            <Button2 type="submit">
-              Signup <FaAngleDoubleRight />
-            </Button2>
+            <Link to="/menu">
+              <Button2 type="submit">
+                Signup <FaAngleDoubleRight />
+              </Button2>
+            </Link>
           </div>
           <div className="flex justify-between">
             <span className="flex gap-x-2">
