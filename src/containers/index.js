@@ -9,7 +9,7 @@ const Landing = () => {
     <div className="onboarding ">
       <div className="main-contents ">
         <h1>ASAPs. MENU.</h1>
-        <h2>Pivot of Elegance</h2>
+        <h2>Treys of Elegance</h2>
         <Link to="/login">
           <Button2 className="px-4 text-2xl ">Get Started {">> >"}</Button2>
         </Link>
