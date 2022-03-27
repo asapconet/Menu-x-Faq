@@ -13,14 +13,14 @@
 
 @import "pages/home";
 
-
 .app-body {
-  padding: 3.5rem 10% 0 10%;
-  background: rgb(236, 193, 236);
+  padding: 3.5rem 0 0 4%;
+  background: fixed;
+  background-image: url("../images/11062b_16498040e0d148beaa0ce957046216ab_mv2.webp");
 }
 
 @media screen and (max-width: 660px) {
   .app-body {
-    padding: 3.5rem 3% 2% .1%;
+    padding: 3.5rem 3% 2% 0.1%;
   }
 }

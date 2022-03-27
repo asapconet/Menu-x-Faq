@@ -6,7 +6,7 @@ import "../sass/pages/_home.scss";
 
 const Landing = () => {
   return (
-    <div className="onboarding">
+    <div className="onboarding ">
       <div className="main-contents ">
         <h1>ASAPs. MENU.</h1>
         <h2>Pivot of Elegance</h2>

@@ -1,9 +1,10 @@
 .footer-container {
-    background: #c762c7;
+    background: transparent;
     // position: absolute;
-    height: 4rem;
+    height: 5.5rem;
     width: 100%;
     .footer-items {
         display: flex;
+        gap: 2rem;
     }
 }

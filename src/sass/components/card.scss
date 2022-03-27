@@ -1,26 +1,47 @@
+$transition: all 0.2s linear;
+
 .food-card {
-  border: black;
-  background: white;
-  color: gray;
+  border: rgb(161, 156, 156);
+  background: transparent;
+  color: #dad3d3;
   width: 70%;
   border-radius: 0 1.5rem;
   padding: 0 0 1.5rem 0;
   margin: 0.5rem;
   h2 {
-    position: absolute;
+    position: relative;
+    top: 5%;
     color: white;
   }
   h3 {
     text-align: right;
   }
-  img {
-    height: 37rem;
+  .img-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45rem;
     width: 100%;
+  }
+  .img-holder:hover {
+    opacity: 95%;
+    transition: $transition;
+  }
+  img {
     border-radius: 0 1.5rem;
+    height: 100%;
+    width: 100%;
+    transition: $transition;
+  }
+  img:hover {
+    border-radius: 0 1.5rem;
+    height: 99%;
+    width: 99%;
+    transition: $transition;
   }
 }
 .receipe-container-lg {
-display: none;
+  display: none;
 }
 @media screen and (max-width: 600px) {
   .card-container {
@@ -33,13 +54,13 @@ display: none;
       }
     }
     .receipe-container-lg {
-        display: block;
+      display: block;
     }
     .receipe-container {
-        display: none;
+      display: none;
     }
     h2 {
-        font-size: larger;
+      font-size: larger;
     }
   }
 }

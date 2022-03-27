@@ -1,6 +1,7 @@
 .nav-body {
-  background: #c762c7;
-  position: fixed;
+  background: transparent;
+  color: gold;
+  position: fixed ;
   width: 100%;
   height: 3.5rem;
   align-items: center;
@@ -33,7 +34,7 @@
   .logo-lg {
     display: none;
   }
-  
+
   .nav-sm {
     display: flex;
     justify-content: center;

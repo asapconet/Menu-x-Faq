@@ -15,7 +15,7 @@ export default function ModalTwo({
       <Transition appear show={open} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-0 z-10 overflow-y-auto backdrop-filter backdrop-blur-lg"
+          className="relative inset-0 z-10 overflow-y-auto backdrop-filter backdrop-blur-lg"
           onClose={closeModal}
         >
           <div

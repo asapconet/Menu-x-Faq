@@ -7,13 +7,13 @@ import { FaUser, FaThumbsUp, FaPlus, FaHeart } from "react-icons/fa";
 import { likeAction } from "../Context/like-slice";
 
 export const Card = (props) => {
-  const dispatch = useDispatch()
-  const like = useSelector(state => state.like.liked)
+  const dispatch = useDispatch();
+  const like = useSelector((state) => state.like.liked);
 
   const likeHandler = () => {
-    dispatch(likeAction.liked())
-    console.log('liked')
-    console.log(like)
+    dispatch(likeAction.liked());
+    console.log("liked");
+    console.log(like);
   };
   // const dispatch = useDispatch();
 
@@ -47,10 +47,15 @@ export const Card = (props) => {
       {menu.map((e) => {
         const { id, title, price, img, desc, location } = e;
         return (
-          <div className="card-container flex" key={id}>
+          <div
+            className="card-container backdrop-filter backdrop-blur-md flex"
+            key={id}
+          >
             <div className="food-card sm:w-40">
               <h2>{title}</h2>
-              <img src={img} alt={title} />
+              <div className="img-holder">
+                <img src={img} alt={title} />
+              </div>
               <div className="flex justify-between p-4 pb-0 ">
                 <h3 className="text-green-500">${price}</h3>
 
@@ -61,7 +66,7 @@ export const Card = (props) => {
                   </Button1>
                   <span className="px-5">
                     <Button1 onClick={likeHandler}>
-                     { <FaThumbsUp />}
+                      {<FaThumbsUp />}
                       <span className="text-xs">12</span>
                     </Button1>
                   </span>
@@ -78,19 +83,21 @@ export const Card = (props) => {
                 {postDate.day + "/" + postDate.month + "/" + postDate.year}
               </span>
               <span className="mx-2 font-bold">{location}</span>
+
+              {/* SIDE CARD ON SMALL SCREEN */}
               <div className="receipe-container-lg">
                 <h4 className="pt-2 px-1 text-2xl font-bold capitalize">
                   receipe
                 </h4>
                 <p className="text-right text-medium m-0 p-2 ">{desc}</p>
 
-                <div className="m-3 text-gray-500 ">
+                <div className="m-3 text-white ">
                   <h5>Comments</h5>
                   <div className="border-t text-sm ">
                     <span className="font-bold p-2">
                       <span>Jon: </span>
                       <span className="text-gray-400 text-xs font-medium">
-                        on:{postTiming()}
+                        at:{postTiming()}
                       </span>
                       <p className="font-light px-2">
                         I tried this, reciepe and my mom loved it <br /> it was
@@ -101,18 +108,20 @@ export const Card = (props) => {
                 </div>
               </div>
             </div>
-            <div class=" receipe-container flex flex-col text-justify w-80 p-2 my-2 rounded-tl-none rounded-bl-2xl rounded-tr-2xl bg-white">
+
+            {/* SIDE CARD FOR LARGE CARD  */}
+            <div class=" receipe-container flex flex-col text-justify w-96 p-2 my-2 rounded-tl-none rounded-bl-2xl rounded-tr-2xl border border-gray-600">
               <h4 className="p-1 text-3xl font-bold capitalize text-center">
                 receipe
               </h4>
-              <p className="text-right text-medium m-0 ">{desc}</p>
+              <p className="text-right text-white text-medium m-0 ">{desc}</p>
 
               <div className="mt-5 text-gray-500 ">
                 <h5>Comments</h5>
                 <div className="border-t text-sm ">
                   <span className="font-bold float-left">
                     Jon:{" "}
-                    <p className="font-light px-2">
+                    <p className="font-light text-white px-2">
                       I tried this, reciepe and my mom loved it <br /> it was
                       delicious and I would buy and try some more
                     </p>
@@ -122,11 +131,11 @@ export const Card = (props) => {
                   </span>
                   <span className="font-bold float-left">
                     Maang:
-                    <p className="font-light px-2">
+                    <p className="font-light text-white px-2">
                       This is delicious, nice job I would buy and try some more
                     </p>
                     <span className="float-right text-gray-400 text-xs font-medium">
-                      on:{postTiming()}
+                      at:{postTiming()}
                     </span>
                   </span>
                 </div>

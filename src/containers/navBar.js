@@ -21,7 +21,7 @@ export const Navigator = () => {
 
   return (
     <>
-      <div className="nav-body">
+      <div className="nav-body border-b border-gray-600">
         <div className="nav-container flex ">
           <div className="logo-sm mt-4 text-3xl font-bold ">
             <CgMenuLeft />
@@ -31,7 +31,7 @@ export const Navigator = () => {
           <div className="options-lg">
             <ul>
               <ul>
-                <li className="hover:bg-white rounded-t-lg">
+                <li className="hover:bg-gray-600 ">
                   {" "}
                   Categories
                   <li className="bg-white px-2 py-2 hidden rounded shadow-lg flex flex-col gap-y-2">
@@ -56,12 +56,8 @@ export const Navigator = () => {
             </ul>
           </div>
           <div className=" buttons-lg flex">
-            <Button1>
-              <a href="/login">sign in ...</a>
-            </Button1>
-
-            <Button2>
-              <a href="/signup">sign up...</a>
+            <Button2 className="text-black px-4">
+              <a href="/">sign out...</a>
             </Button2>
           </div>
         </div>
