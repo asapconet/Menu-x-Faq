@@ -1,14 +1,21 @@
 import React from "react";
 import Button1, { Button2 } from "./button";
 import { useDispatch } from "react-redux";
-import { CartActions } from "../Context/cart-slice";
+import { CartActions } from "../services/cart-slice";
 
 export const CartItems = (props) => {
-
   const dispatch = useDispatch();
 
-  const { id, title, quantity, totalPrice, totalQuantity, price, image, total } =
-    props;
+  const {
+    id,
+    title,
+    quantity,
+    totalPrice,
+    totalQuantity,
+    price,
+    image,
+    total,
+  } = props;
 
   const addItem = () => {
     dispatch(
@@ -19,7 +26,8 @@ export const CartItems = (props) => {
         image,
         price,
         total,
-      })
+    
+      }),
     );
   };
 
@@ -33,7 +41,7 @@ export const CartItems = (props) => {
         <div>
           <div className="flex justify-between">
             <span>
-              <img src={image} alt={title} className="w-12" />
+              <img src={image} alt={"title"} className="w-12" />
               {title}
             </span>
             <span className="font-bold">

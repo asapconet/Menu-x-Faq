@@ -1,14 +1,14 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { CartActions } from "../Context/cart-slice";
+import { CartActions } from "../services/cart-slice";
 import Button1 from "./button";
 import menu from "../data/api";
 import { FaUser, FaThumbsUp, FaPlus, FaHeart } from "react-icons/fa";
-import { likeAction } from "../Context/like-slice";
+import { likeAction } from "../services/like-slice";
 
 export const Card = (props) => {
   const dispatch = useDispatch();
-  const like = useSelector((state) => state.like.liked);
+  const like = useSelector((state) => state.like.currentLikes);
 
   const likeHandler = () => {
     dispatch(likeAction.liked());
@@ -67,7 +67,7 @@ export const Card = (props) => {
                   <span className="px-5">
                     <Button1 onClick={likeHandler}>
                       {<FaThumbsUp />}
-                      <span className="text-xs">12</span>
+                      <span className="text-xs">{like}</span>
                     </Button1>
                   </span>
                   <Button1 onClick={addToCartHandler}>

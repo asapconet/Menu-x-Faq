@@ -1,12 +1,12 @@
 import React from "react";
 import "../sass/pages/navBar.scss";
 // import Logo from "../images/Logo.png";
-import Button1, { Button2 } from "../Components/button";
+import { Button2 } from "../Components/button";
 import { CgMenuLeft } from "react-icons/cg";
 import { FaAngrycreative, FaCartArrowDown } from "react-icons/fa";
 
 import { useDispatch, useSelector } from "react-redux";
-import { HomeActions } from "../Context/home-slice";
+import { HomeActions } from "../services/home-slice";
 
 export const Navigator = () => {
   const dispatch = useDispatch();

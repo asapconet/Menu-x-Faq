@@ -8,11 +8,11 @@ const cartSlice = createSlice({
     totalPrice: 0,
   },
   reducers: {
-   addItemToCart(state, action) {
+    addItemToCart(state, action) {
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.totalPrice++;
-      state.totalQuantity++
+      state.totalQuantity++;
       if (!existingItem) {
         state.items.push({
           id: newItem.id,
@@ -30,7 +30,7 @@ const cartSlice = createSlice({
         existingItem.totalPrice = existingItem.totalPrice + newItem.price;
       }
     },
-    removeItemFromCart( state, action) {
+    removeItemFromCart(state, action) {
       const id = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
       state.totalPrice--;

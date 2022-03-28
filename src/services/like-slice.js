@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const likeSlice = createSlice({
   name: "like",
   initialState: { isLiked: false },
-  currentLikes: 0,
+  currentLikes: 3,
   reducers: {
     liked(state) {
         if (!state.isLiked) {

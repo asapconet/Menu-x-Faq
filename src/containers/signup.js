@@ -45,7 +45,7 @@ const Signup = () => {
           </label>
           <div className="flex justify-center text-center my-6">
             <Link to="/menu">
-              <Button2 type="submit">
+              <Button2 type="submit" className='px-3'>
                 Signup <FaAngleDoubleRight />
               </Button2>
             </Link>

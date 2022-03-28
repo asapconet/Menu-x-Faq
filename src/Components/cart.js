@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { HomeActions } from "../Context/home-slice";
+import { HomeActions } from "../services/home-slice";
 import { CartItems } from "./cart-Items";
 
 const Cart = () => {

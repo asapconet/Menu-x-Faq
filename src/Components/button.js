@@ -1,9 +1,9 @@
 import React from "react";
 import "../sass/components/_button.scss";
 
-const Button1 = ({ children, onClick, className }) => {
+const Button1 = ({ children, type, onClick, className }) => {
   return (
-    <button className={"primary-btn" + className} onClick={onClick}>
+    <button type={type} className={"primary-btn" + className} onClick={onClick}>
       {children}
     </button>
   );
@@ -11,9 +11,13 @@ const Button1 = ({ children, onClick, className }) => {
 
 export default Button1;
 
-export const Button2 = ({ children, onClick, className }) => {
+export const Button2 = ({ children, type, onClick, className }) => {
   return (
-    <button className={`secondary-btn ${className}`} onClick={onClick}>
+    <button
+      type={type}
+      className={`secondary-btn ${className}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

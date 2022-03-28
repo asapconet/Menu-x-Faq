@@ -1,19 +1,11 @@
 import React from "react";
 
-const Input = ({
-  title,
-  label,
-  placeholder,
-  register,
-  required,
-  disabled = false,
-  type,
-}) => {
+const Input = ({ title, label, placeholder, disabled = false, type }) => {
   return (
-    <div className="mb-6">
+    <div className="mt-6">
       <label
         className=" mb-2 block text-gray-800 font-bold text-base"
-        for={title}
+        htmlFor={title}
       >
         {label}
       </label>
@@ -23,7 +15,6 @@ const Input = ({
         type={type}
         placeholder={placeholder}
         disabled={disabled}
-        // {...register(title, { required })}
       />
     </div>
   );
