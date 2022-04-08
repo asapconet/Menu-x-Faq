@@ -1,12 +1,13 @@
 import React from "react";
 import "../sass/pages/navBar.scss";
-// import Logo from "../images/Logo.png";
+import { Link } from 'react-router-dom'
 import { Button2 } from "../Components/button";
 import { CgMenuLeft } from "react-icons/cg";
 import { FaAngrycreative, FaCartArrowDown } from "react-icons/fa";
 
 import { useDispatch, useSelector } from "react-redux";
 import { HomeActions } from "../services/home-slice";
+
 
 export const Navigator = () => {
   const dispatch = useDispatch();
@@ -43,7 +44,9 @@ export const Navigator = () => {
                 </li>
               </ul>
               <ul>
-                <li>FAQs</li>
+                <li>
+                <Link to={"/faqs"}>FAQs</Link>
+                </li>
               </ul>
               <ul>
                 <li>

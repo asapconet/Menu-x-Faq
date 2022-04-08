@@ -1,0 +1,38 @@
+$transitions: all 0.3s transition;
+
+.main {
+  position: relative;
+  top: 8rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .faq--body {
+    width: 40%;
+    margin: 0.5rem;
+    .faq--body:active {
+      transition: $transitions;
+    }
+    .faq--card {
+      border-radius: 0.2rem;
+      background: gray;
+      padding: 1rem;
+      margin-top: 0.4rem;
+    }
+    .faq--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.2rem;
+      text-transform: capitalize;
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .faq--res {
+      padding-top: 1rem;
+      transition: $transitions;
+    }
+  }
+}

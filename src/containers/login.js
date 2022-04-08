@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Input from "../Components/input";
 import Modal from "../Components/modal";
 import { Button2 } from "../Components/button";
-import { Link } from "react-router-dom";
 import { FaAngleDoubleRight, FaUserTie } from "react-icons/fa";
-import { Formik, useFormik } from "formik";
+import {  useFormik } from "formik";
 import * as Yup from "yup";
 import { client } from "../config/config";
 
@@ -68,7 +67,7 @@ const Login = () => {
           <Input
             id="username"
             type="text"
-            placeholder="@jonson or a@icloud.com"
+            placeholder="a@icloud.com"
             {...formik.getFieldProps("username")}
           />
           {formik.touched.username && formik.errors.username ? (
@@ -77,9 +76,8 @@ const Login = () => {
             </p>
           ) : null}
           {errors.username && (
-            <p className="text-xs text-red-500 italic">{errors.username}</p>
+            <p className="text-red-500 text-xs italic">{errors.username}</p>
           )}
-
           <label>Password</label>
           <Input
             id="password"
