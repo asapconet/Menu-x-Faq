@@ -47,13 +47,10 @@ export const Card = (props) => {
       {menu.map((e) => {
         const { id, title, price, img, desc, location } = e;
         return (
-          <div
-            className="card-container backdrop-filter backdrop-blur-md flex"
-            key={id}
-          >
+          <div className="card-container flex" key={id}>
             <div className="food-card sm:w-40">
               <h2>{title}</h2>
-              <div className="img-holder">
+              <div className="img-holder ">
                 <img src={img} alt={title} />
               </div>
               <div className="flex justify-between p-4 pb-0 ">

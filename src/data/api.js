@@ -86,13 +86,31 @@ export default menu;
 export const dummyFaq = [
   {
     id: 1,
-    question: "this place we get the main things sitting and ...",
+    question: "What is Menu-x-Faq?",
     answer:
       "Onn this day, 7th of March I was arrained and asked to move my baggage out, with an ultimatum of three days, I pleaded but it made me just look dumb...",
   },
   {
     id: 2,
-    question: "this place we get the main things sitting and ...",
+    question: "Why Menu-x-Faq?",
+    answer:
+      "Onn this day, 7th of March I was arrained and asked to move my baggage out, with an ultimatum of three days, I pleaded but it made me just look dumb...",
+  },
+  {
+    id: 3,
+    question: "What is the location?",
+    answer:
+      "Onn this day, 7th of March I was arrained and asked to move my baggage out, with an ultimatum of three days, I pleaded but it made me just look dumb...",
+  },
+  {
+    id: 4,
+    question: "How can we reach out and make donations?",
+    answer:
+      "Onn this day, 7th of March I was arrained and asked to move my baggage out, with an ultimatum of three days, I pleaded but it made me just look dumb...",
+  },
+  {
+    id: 5,
+    question: "What is your motivation?",
     answer:
       "Onn this day, 7th of March I was arrained and asked to move my baggage out, with an ultimatum of three days, I pleaded but it made me just look dumb...",
   },

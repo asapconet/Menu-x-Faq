@@ -1,15 +1,16 @@
 import React from "react";
 import "../sass/pages/navBar.scss";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import { Button2 } from "../Components/button";
 import { CgMenuLeft } from "react-icons/cg";
 import { FaAngrycreative, FaCartArrowDown } from "react-icons/fa";
 
 import { useDispatch, useSelector } from "react-redux";
 import { HomeActions } from "../services/home-slice";
-
+// import Faqs from "./faqs";
 
 export const Navigator = () => {
+  // const [showFaq, setShowFaq] = React.useState(false);
   const dispatch = useDispatch();
 
   const updateQuantityHandler = useSelector(
@@ -28,14 +29,16 @@ export const Navigator = () => {
             <CgMenuLeft />
           </div>
           {/* <img src={Logo} alt="logo" className="logo-lg hidden" /> */}
-          <FaAngrycreative className="logo-lg text-6xl text-white" />
+          <Link to={"/menu"}>
+            <FaAngrycreative className="logo-lg text-6xl text-white" />
+          </Link>
           <div className="options-lg">
             <ul>
               <ul>
-                <li className="hover:bg-gray-600 ">
+                <li className=" ">
                   {" "}
                   Categories
-                  <li className="bg-white px-2 py-2 hidden rounded shadow-lg flex flex-col gap-y-2">
+                  <li className="bg- px-2 pt-3 rounded hidden shadow-lg flex flex-col gap-y-1">
                     <li>Breakfast</li>
                     <li>Lunch</li>
                     <li>Dinner</li>
@@ -45,7 +48,7 @@ export const Navigator = () => {
               </ul>
               <ul>
                 <li>
-                <Link to={"/faqs"}>FAQs</Link>
+                  <Link to={"/faqs"}>FAQs</Link>
                 </li>
               </ul>
               <ul>
