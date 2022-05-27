@@ -2,15 +2,21 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const likeSlice = createSlice({
   name: "like",
-  initialState: { isLiked: false },
-  currentLikes: 3,
+  initialState: {
+    isLiked: false,
+    currentLikes: 0,
+  },
   reducers: {
     liked(state) {
-        if (!state.isLiked) {
-            state.currentLikes++
-        } else {
-            state.currentLikes--
-        }
+      if (!state.isLiked) {
+        state.currentLikes++;
+        state.isLiked = !state.isLiked;
+      } else if (state.isLiked) {
+        state.currentLikes--;
+        state.isLiked = !state.isLiked;
+      } else {
+        return null;
+      }
     },
   },
 });

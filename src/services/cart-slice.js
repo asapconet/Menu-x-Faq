@@ -14,17 +14,19 @@ const cartSlice = createSlice({
       state.totalPrice++;
       state.totalQuantity++;
       if (!existingItem) {
-        state.items.push({
-          id: newItem.id,
-          name: newItem.title,
-          image: newItem.img,
-          quantity: 1,
-          price: newItem.price,
-          totalPrice: newItem.price,
-          // location: newItem.location,
-          desc: newItem.desc,
-          // category: newItem.category
-        });
+        state.items.push(
+          {
+            id: newItem.id,
+            name: newItem.title,
+            image: newItem.img,
+            quantity: 1,
+            price: newItem.price,
+            totalPrice: newItem.price,
+            // location: newItem.location,
+            desc: newItem.desc,
+            // category: newItem.category
+          },
+        );
       } else {
         existingItem.quantity++;
         existingItem.totalPrice = existingItem.totalPrice + newItem.price;

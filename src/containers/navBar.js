@@ -34,18 +34,18 @@ export const Navigator = () => {
           </Link>
           <div className="options-lg">
             <ul>
-              <ul>
-                <li className=" ">
-                  {" "}
+              {/* <ul>
+                <li class="dropdown dropdown-6">
                   Categories
-                  <li className="bg- px-2 pt-3 rounded hidden shadow-lg flex flex-col gap-y-1">
-                    <li>Breakfast</li>
-                    <li>Lunch</li>
-                    <li>Dinner</li>
-                    <li>Desert</li>
-                  </li>
+                  <ul className="dropdown_menu dropdown_menu--animated dropdown_menu-6 pt-3 rounded shadow-lg flex flex-col gap-y-1">
+                    <li className="dropdown_item-1">Breakfast</li>
+                    <li className="dropdown_item-2">Lunch</li>
+                    <li className="dropdown_item-3">Dinner</li>
+                    <li className="dropdown_item-4">Desert</li>
+                    <li className="dropdown_item-5">Appetizer</li>
+                  </ul>
                 </li>
-              </ul>
+              </ul> */}
               <ul>
                 <li>
                   <Link to={"/faqs"}>FAQs</Link>

@@ -5,18 +5,23 @@ import Button1 from "./button";
 import menu from "../data/api";
 import { FaUser, FaThumbsUp, FaPlus, FaHeart } from "react-icons/fa";
 import { likeAction } from "../services/like-slice";
+import { loveAction } from "../services/loveSlice";
+import { Link } from "react-router-dom";
 
 export const Card = (props) => {
   const dispatch = useDispatch();
   const like = useSelector((state) => state.like.currentLikes);
+  const love = useSelector((state) => state.love.currentLove);
 
   const likeHandler = () => {
-    dispatch(likeAction.liked());
-    console.log("liked");
+    dispatch(likeAction.liked({ like }));
     console.log(like);
   };
-  // const dispatch = useDispatch();
+  const loveHandler = () => {
+    dispatch(loveAction.loved({ love }));
+  };
 
+  
   const { id, title, price, img } = props;
 
   const addToCartHandler = () => {
@@ -47,19 +52,24 @@ export const Card = (props) => {
       {menu.map((e) => {
         const { id, title, price, img, desc, location } = e;
         return (
-          <div className="card-container flex" key={id}>
-            <div className="food-card sm:w-40">
-              <h2>{title}</h2>
-              <div className="img-holder ">
-                <img src={img} alt={title} />
+          <div
+            className="card-container flex backdrop-filter backdrop-blur-sm"
+            key={id}
+          >
+            <div className="food-card">
+              <div className="">
+                <h2>{title}</h2>
+                <div className="img-holder ">
+                  <img src={img} alt={title} />
+                </div>
               </div>
               <div className="flex justify-between p-4 pb-0 ">
                 <h3 className="text-green-500">${price}</h3>
 
                 <div className=" flex items-center m-2 px-3">
-                  <Button1>
+                  <Button1 onClick={loveHandler}>
                     <FaHeart className="text-red-600" />
-                    <span className="text-xs">10</span>
+                    <span className="text-xs">{love}</span>
                   </Button1>
                   <span className="px-5">
                     <Button1 onClick={likeHandler}>
@@ -73,7 +83,9 @@ export const Card = (props) => {
                   </Button1>
                 </div>
                 <div className="text-sm font-bold">
-                  <FaUser className="text-2xl" />
+                  <Link to="/user">
+                    <FaUser className="text-2xl" />
+                  </Link>
                 </div>
               </div>
               <span className="text-xs font-bold text-gray-400 float-right">
@@ -107,12 +119,11 @@ export const Card = (props) => {
             </div>
 
             {/* SIDE CARD FOR LARGE CARD  */}
-            <div class=" receipe-container flex flex-col text-justify w-96 p-2 my-2 rounded-tl-none rounded-bl-2xl rounded-tr-2xl border border-gray-600">
+            <div className=" receipe-container flex flex-col text-justify w-96 p-2 my-2 rounded-tl-none rounded-bl-2xl rounded-tr-2xl border border-gray-600">
               <h4 className="p-1 text-3xl font-bold capitalize text-center">
                 receipe
               </h4>
               <p className="text-right text-white text-medium m-0 ">{desc}</p>
-
               <div className="mt-5 text-gray-500 ">
                 <h5>Comments</h5>
                 <div className="border-t text-sm ">

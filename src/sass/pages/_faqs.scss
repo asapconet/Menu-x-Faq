@@ -2,7 +2,7 @@ $transitions: all 0.3s transition;
 
 .main {
   position: relative;
-  top: 6rem;
+  top: 10rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -34,42 +34,42 @@ $transitions: all 0.3s transition;
       transition: $transitions;
     }
   }
-  .faq--header {
-    animation-duration: 0.5sec;
-    animation-name: faqFade;
-    animation-fill-mode: backwards;
-  }
-  @keyframes faqFade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .faq--header.pop {
-    animation-name: faqPop;
-    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
-  }
-  @keyframes faqPop {
-    0% {
-      opacity: 0;
-      transform: scale(0.5, 0.5);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1, 1);
-    }
-  }
-  .faq--header:nth-child(1) {
-    animation-delay: 2sec;
-  }
+  // .faq--header {
+  //   animation-duration: 0.5sec;
+  //   animation-name: faqFade;
+  //   animation-fill-mode: backwards;
+  // }
+  // @keyframes faqFade {
+  //   0% {
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //   }
+  // }
+  // .faq--header.pop {
+  //   animation-name: faqPop;
+  //   animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  // }
+  // @keyframes faqPop {
+  //   0% {
+  //     opacity: 0;
+  //     transform: scale(0.5, 0.5);
+  //   }
+  //   100% {
+  //     opacity: 1;
+  //     transform: scale(1, 1);
+  //   }
+  // }
+  // .faq--header:nth-child(1) {
+  //   animation-delay: 2sec;
+  // }
 }
 
 .dropdown_menu {
   position: absolute;
-  top: 100%;
-  left: 50%;
+  // top: 100%;
+  left: 40%;
   width: 100%;
   perspective: 1000px;
   display: none;
