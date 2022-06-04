@@ -3,16 +3,16 @@ import Input from "../Components/input";
 import Modal from "../Components/modal";
 import { Button2 } from "../Components/button";
 import { FaAngleDoubleRight, FaUserTie } from "react-icons/fa";
-import {  useFormik } from "formik";
+import { useFormik } from "formik";
 import * as Yup from "yup";
 import { client } from "../config/config";
 
 const schema = Yup.object().shape({
-  username: Yup.string()
-    .email("your entry format is incorrect")
-    .required("Username does not exits"),
+  username: Yup.string().email("your entry format is incorrect").required(
+    "Username does not exits"
+  ),
   password: Yup.string()
-    .required("Password requied")
+    // .required("Password requied")
     .min(8, "Password incomplete"),
 });
 
@@ -34,12 +34,13 @@ const Login = () => {
         password: values.password,
       };
 
+      console.log(logs);
       client
-        .put(logs)
+        .put("https://api.jon.com", logs)
         .then((res) => {
           formik.resetForm();
+          console.log("names entered");
           window.location.href = "/menu";
-          console.log(res);
         })
         .catch((err) => {
           console.log(err);
@@ -67,7 +68,7 @@ const Login = () => {
           <Input
             id="username"
             type="text"
-            placeholder="a@icloud.com"
+            placeholder="aships@icloud.com"
             {...formik.getFieldProps("username")}
           />
           {formik.touched.username && formik.errors.username ? (

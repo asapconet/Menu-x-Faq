@@ -45,7 +45,7 @@ const Signup = () => {
           </label>
           <div className="flex justify-center text-center my-6">
             <Link to="/menu">
-              <Button2 type="submit" className='px-3'>
+              <Button2 type="submit" className="px-3">
                 Signup <FaAngleDoubleRight />
               </Button2>
             </Link>
@@ -57,7 +57,7 @@ const Signup = () => {
               <FaGithub />
             </span>
             <span className="font-medium">
-              <a href="/login">have an account? login</a>
+              <Link to="/login">have an account? login</Link>
             </span>
           </div>
         </form>
